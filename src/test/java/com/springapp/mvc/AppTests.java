@@ -1,5 +1,6 @@
 package com.springapp.mvc;
 
+import jdk.nashorn.internal.runtime.ECMAException;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -11,6 +12,7 @@ import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.web.context.WebApplicationContext;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.view;
 import static org.springframework.test.web.servlet.setup.MockMvcBuilders.webAppContextSetup;
@@ -36,4 +38,11 @@ public class AppTests {
                 .andExpect(status().isOk())
                 .andExpect(view().name("hello"));
     }
+
+
+   @Test
+    public void login() throws Exception{
+       mockMvc.perform(post("/login")).andExpect(view().name("hello"));
+   }
+
 }

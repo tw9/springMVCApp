@@ -21,6 +21,7 @@
                 <input type="reset" value="Redo"/>
             </td>
         </tr>
+        <span style="color: red;">${info}</span>
     </table>
     </form>
 </body>
