@@ -41,15 +41,27 @@ public class MethodPlan {
     }
 
 
-    public Object  insertOne(Plan plan){
+    public void insertOne(Plan plan){
         dbrun=getDbrun();
-        Object o=null;
         try {
-            o=dbrun.insert("insertOne",plan);
+            dbrun.insert("insertOne",plan);
         } catch (SQLException e) {
             e.printStackTrace();
         }
-
-        return o;
     }
+
+
+
+    public void importFromExcel(String filePath){
+        dbrun=getDbrun();
+        ImportFromExcel importFromExcel=new ImportFromExcel();
+        try {
+            String datas=importFromExcel.excelToSqlData(filePath);
+            dbrun.insert("insertAll",datas);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+
 }

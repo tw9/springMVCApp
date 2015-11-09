@@ -9,7 +9,7 @@ import org.springframework.stereotype.Repository;
 public class User {
 
 /*
-CREATE TALBE USER(
+CREATE TABLE USER(
 ID INTEGER,
 REALNAME VARCHAR(20),
 LOGINNAME VARCHAR(20),
@@ -17,7 +17,6 @@ PASSWORD  VARCHAR(50),
 PHONE VARCHAR(20),
 EMAIL VARCHAR(50),
 ADDRESS VARCHAR(300)
-
 )
 */
 

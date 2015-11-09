@@ -15,7 +15,7 @@
     <transactionManager type="JDBC">
         <dataSource type="SIMPLE">
             <property name="JDBC.Driver" value="org.sqlite.JDBC"/>
-            <property name="JDBC.ConnectionURL" value="jdbc:sqlite:/Users/taylor/doc/database/SQLite/sqlite3/cola.db"/>
+            <property name="JDBC.ConnectionURL" value="jdbc:sqlite:/Users/taylor/doc/database/cola.db"/>
             <property name="JDBC.Username" value=""/>
             <property name="JDBC.Password" value=""/>
         </dataSource>

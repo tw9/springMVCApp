@@ -9,6 +9,8 @@
     <context:component-scan base-package="com.finance.controller" />
     <context:component-scan base-package="com.finance.beans" />
     <context:component-scan base-package="com.finance.method" />
+    <context:component-scan base-package="com.finance.sql" />
+    <context:component-scan base-package="com.config" />
 
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="prefix" value="/WEB-INF/pages/"/>
@@ -16,8 +18,5 @@
     </bean>
 
 
-    <bean id="user" class="com.finance.beans.User">
-
-    </bean>
 
 </beans>

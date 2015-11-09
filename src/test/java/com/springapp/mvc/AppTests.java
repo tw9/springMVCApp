@@ -45,4 +45,9 @@ public class AppTests {
        mockMvc.perform(post("/login")).andExpect(view().name("hello"));
    }
 
+    @Test
+    public void getallUser(){
+        System.out.println("hello");
+    }
+
 }

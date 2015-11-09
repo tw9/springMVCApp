@@ -2,6 +2,7 @@ package run;
 
 
 import beans.Plan;
+import method.ImportFromExcel;
 import method.MethodPlan;
 
 import java.util.List;
@@ -15,19 +16,21 @@ public class Test {
         MethodPlan methodPlan=new MethodPlan();
 
         List<Plan> list=methodPlan.getAll();
-        System.out.println("listsize:"+list.size());
+        System.out.println("listsize:" + list.size());
 
         for(int i=0;i<list.size();i++){
             Plan plan=list.get(i);
-            System.out.println("orgid:"+plan.getOrgid());
-            System.out.println("pln:"+plan.getPln());
+            System.out.print("orgid:" + plan.getOrgid());
+            System.out.println("  pln:" + plan.getPln());
         }
         System.out.println("***************************************************");
-       Plan plan=new Plan();
-        plan.setOrgid("013109999999");
-        plan.setPln(34422542.341);
-        System.out.println("insert:"+methodPlan.insertOne(plan));
 
+        methodPlan.importFromExcel("/Users/taylor/Documents/temp/test/test.xlsx");
+
+        //  /Users/taylor/doc/temp/test/test.xlsnx
+
+//        ImportFromExcel importFromExcel=new ImportFromExcel();
+//        System.out.println(importFromExcel.excelToSqlData("/Users/taylor/Documents/temp/test/test.xlsx"));
 
 
     }

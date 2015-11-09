@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap
+        PUBLIC "-//ibatis.apache.org//DTD SQL MAP 2.0//EN"
+        "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+<sqlMap>
+    <typeAlias alias="Plan" type="beans.Plan"/>
+    <!-- ibatis查询操作 -->
+    <select id="getAll" resultClass="Plan">
+        select *
+        from plan
+    </select>
+
+    <insert id="insertOne" parameterClass="Plan">
+        insert into plan(orgid,pln)
+        values(#orgid#,#pln#)
+    </insert>
+
+    <insert id="insertAll" parameterClass="java.lang.String">
+        insert into plan(orgid,pln)
+        values $datas$
+    </insert>
+
+</sqlMap>

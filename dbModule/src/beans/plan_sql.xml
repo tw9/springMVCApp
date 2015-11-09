@@ -15,4 +15,9 @@
         values(#orgid#,#pln#)
     </insert>
 
+    <insert id="insertAll" parameterClass="java.lang.String">
+        insert into plan(orgid,pln)
+        values $datas$
+    </insert>
+
 </sqlMap>
